@@ -55,3 +55,5 @@ function parseBookFile (filePath) {
     console.log(`Parsed ${paragraphs.length} Paragraphs\n`)
     return { title, author, paragraphs }
   }
+
+  
