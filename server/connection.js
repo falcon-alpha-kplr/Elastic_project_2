@@ -31,7 +31,7 @@ async function resetIndex () {
     await putBookMapping()
   }
 
-  
+
 async function putBookMapping () {
 const schema = {
     title: { type: 'keyword' },
@@ -42,3 +42,7 @@ const schema = {
 
 return client.indices.putMapping({ index, type, body: { properties: schema } })
 }
+
+module.exports = {
+    client, index, type, checkConnection, resetIndex
+  }
